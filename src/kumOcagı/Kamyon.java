@@ -7,7 +7,7 @@ public class Kamyon {
     static String arac;
     static LocalDate bugun = LocalDate.now();
    static String cikis;
-    static List<String> sonucp=new ArrayList<String>();
+    static List<String> sonucplaka=new ArrayList<String>();
    static List<Integer>sonucd=new ArrayList<Integer>();
     static List<Integer>netAgirlikListesi=new ArrayList<Integer>();
     static List<Integer>ucretListesi=new ArrayList<Integer>();
@@ -24,7 +24,7 @@ public class Kamyon {
 
         aracgirisi();
 
-        arac.put(sonucp,sonucd);
+        arac.put(sonucplaka,sonucd);
         System.out.println(arac);
 
         toplamAgirlik();//+ucret
@@ -53,23 +53,23 @@ public class Kamyon {
         int toplamagirlik = scan.nextInt();
         scan.nextLine();
 
-           System.out.println(" LISTEDEN PLAKA SECINIZ "+sonucp);
+           System.out.println(" LISTEDEN PLAKA SECINIZ "+sonucplaka);
             String secilenplaka=scan.nextLine();
-            for(int i=0;i<sonucp.size();i++) {
-                if(secilenplaka.equals(sonucp.get(i))) {
+            for(int i=0;i<sonucplaka.size();i++) {
+                if(secilenplaka.equals(sonucplaka.get(i))) {
                     int netAgirlik=toplamagirlik-sonucd.get(i);
                     netAgirlikListesi.add(netAgirlik);
                     System.out.println("NET AGIRLIK="+netAgirlik+" TON");
                     int ucret=(toplamagirlik-sonucd.get(i))*100;
                     ucretListesi.add(ucret);
                     System.out.println("KUM TOPLAM UCRETI="+ucret+" TL");
-                    System.out.println("PLAKA NO\tDARABA\tTOPLAM AGIRLIK\tUCRET\n"+sonucp.get(i)+"\t\t"+sonucd.get(i)+"\t\t\t"+toplamagirlik+"\t\t\t"+ucret);
+                    System.out.println("PLAKA NO\tDARABA\tTOPLAM AGIRLIK\tUCRET\n"+sonucplaka.get(i)+"\t\t"+sonucd.get(i)+"\t\t\t"+toplamagirlik+"\t\t\t"+ucret);
                 }
 
             }
-            sonucp.remove(secilenplaka);
+            sonucplaka.remove(secilenplaka);
             scan.nextLine();
-            if(sonucp.isEmpty()){
+            if(sonucplaka.isEmpty()){
                 System.out.println("!SIRADA BEKLEYEN ARAC KALMADI! ICMAL YAPIN");
             }
             System.out.println("================================\nYENI TARTMA VE ARACIN CIKIS ISLEMI(E) \t ICMAL ICIN (H)");
@@ -86,10 +86,10 @@ public class Kamyon {
             System.out.println("DARABA GIRINIZ :");
             int daraba = scan.nextInt();
 
-            sonucp.add(plaka);
+            sonucplaka.add(plaka);
             sonucd.add(daraba);
 
-            System.out.println(sonucp);
+            System.out.println(sonucplaka);
             System.out.println(sonucd);
 
 
