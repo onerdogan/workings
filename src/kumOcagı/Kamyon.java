@@ -8,7 +8,7 @@ public class Kamyon {
     static LocalDate bugun = LocalDate.now();
    static String cikis;
     static List<String> sonucplaka=new ArrayList<String>();
-   static List<Integer>sonucd=new ArrayList<Integer>();
+   static List<Integer>sonucdaraba=new ArrayList<Integer>();
     static List<Integer>netAgirlikListesi=new ArrayList<Integer>();
     static List<Integer>ucretListesi=new ArrayList<Integer>();
     static int toplamkum;
@@ -24,7 +24,7 @@ public class Kamyon {
 
         aracgirisi();
 
-        arac.put(sonucplaka,sonucd);
+        arac.put(sonucplaka,sonucdaraba);
         System.out.println(arac);
 
         toplamAgirlik();//+ucret
@@ -57,13 +57,13 @@ public class Kamyon {
             String secilenplaka=scan.nextLine();
             for(int i=0;i<sonucplaka.size();i++) {
                 if(secilenplaka.equals(sonucplaka.get(i))) {
-                    int netAgirlik=toplamagirlik-sonucd.get(i);
+                    int netAgirlik=toplamagirlik-sonucdaraba.get(i);
                     netAgirlikListesi.add(netAgirlik);
                     System.out.println("NET AGIRLIK="+netAgirlik+" TON");
-                    int ucret=(toplamagirlik-sonucd.get(i))*100;
+                    int ucret=(toplamagirlik-sonucdaraba.get(i))*100;
                     ucretListesi.add(ucret);
                     System.out.println("KUM TOPLAM UCRETI="+ucret+" TL");
-                    System.out.println("PLAKA NO\tDARABA\tTOPLAM AGIRLIK\tUCRET\n"+sonucplaka.get(i)+"\t\t"+sonucd.get(i)+"\t\t\t"+toplamagirlik+"\t\t\t"+ucret);
+                    System.out.println("PLAKA NO\tDARABA\tTOPLAM AGIRLIK\tUCRET\n"+sonucplaka.get(i)+"\t\t"+sonucdaraba.get(i)+"\t\t\t"+toplamagirlik+"\t\t\t"+ucret);
                 }
 
             }
@@ -87,10 +87,10 @@ public class Kamyon {
             int daraba = scan.nextInt();
 
             sonucplaka.add(plaka);
-            sonucd.add(daraba);
+            sonucdaraba.add(daraba);
 
             System.out.println(sonucplaka);
-            System.out.println(sonucd);
+            System.out.println(sonucdaraba);
 
 
             System.out.println("YENI ARAC GIRISI(E) ARACIN CIKIS ISLEMI(ENTER)");//hatali giriste tekrar giris yapma imkani veren blok
