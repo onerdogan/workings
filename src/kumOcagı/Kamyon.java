@@ -7,8 +7,8 @@ public class Kamyon {
     static String arac;
     static LocalDate bugun = LocalDate.now();
    static String cikis;
-    static List<String> sonucplaka=new ArrayList<String>();
-   static List<Integer>sonucdaraba=new ArrayList<Integer>();
+    static List<String> plakaListesi=new ArrayList<String>();
+   static List<Integer>darabaListesi=new ArrayList<Integer>();
     static List<Integer>netAgirlikListesi=new ArrayList<Integer>();
     static List<Integer>ucretListesi=new ArrayList<Integer>();
     static int toplamkum;
@@ -24,7 +24,7 @@ public class Kamyon {
 
         aracgirisi();
 
-        arac.put(sonucplaka,sonucdaraba);
+        arac.put(plakaListesi,darabaListesi);
         System.out.println(arac);
 
         toplamAgirlik();//+ucret
@@ -53,23 +53,23 @@ public class Kamyon {
         int toplamagirlik = scan.nextInt();
         scan.nextLine();
 
-           System.out.println(" LISTEDEN PLAKA SECINIZ "+sonucplaka);
+           System.out.println(" LISTEDEN PLAKA SECINIZ "+plakaListesi);
             String secilenplaka=scan.nextLine();
-            for(int i=0;i<sonucplaka.size();i++) {
-                if(secilenplaka.equals(sonucplaka.get(i))) {
-                    int netAgirlik=toplamagirlik-sonucdaraba.get(i);
+            for(int i=0;i<plakaListesi.size();i++) {
+                if(secilenplaka.equals(plakaListesi.get(i))) {
+                    int netAgirlik=toplamagirlik-darabaListesi.get(i);
                     netAgirlikListesi.add(netAgirlik);
                     System.out.println("NET AGIRLIK="+netAgirlik+" TON");
-                    int ucret=(toplamagirlik-sonucdaraba.get(i))*100;
+                    int ucret=(toplamagirlik-darabaListesi.get(i))*100;
                     ucretListesi.add(ucret);
                     System.out.println("KUM TOPLAM UCRETI="+ucret+" TL");
-                    System.out.println("PLAKA NO\tDARABA\tTOPLAM AGIRLIK\tUCRET\n"+sonucplaka.get(i)+"\t\t"+sonucdaraba.get(i)+"\t\t\t"+toplamagirlik+"\t\t\t"+ucret);
+                    System.out.println("PLAKA NO\tDARABA\tTOPLAM AGIRLIK\tUCRET\n"+plakaListesi.get(i)+"\t\t"+darabaListesi.get(i)+"\t\t\t"+toplamagirlik+"\t\t\t"+ucret);
                 }
 
             }
-            sonucplaka.remove(secilenplaka);
+            plakaListesi.remove(secilenplaka);
             scan.nextLine();
-            if(sonucplaka.isEmpty()){
+            if(plakaListesi.isEmpty()){
                 System.out.println("!SIRADA BEKLEYEN ARAC KALMADI! ICMAL YAPIN");
             }
             System.out.println("================================\nYENI TARTMA VE ARACIN CIKIS ISLEMI(E) \t ICMAL ICIN (H)");
@@ -86,11 +86,11 @@ public class Kamyon {
             System.out.println("DARABA GIRINIZ :");
             int daraba = scan.nextInt();
 
-            sonucplaka.add(plaka);
-            sonucdaraba.add(daraba);
+            plakaListesi.add(plaka);
+            darabaListesi.add(daraba);
 
-            System.out.println(sonucplaka);
-            System.out.println(sonucdaraba);
+            System.out.println(plakaListesi);
+            System.out.println(darabaListesi);
 
 
             System.out.println("YENI ARAC GIRISI(E) ARACIN CIKIS ISLEMI(ENTER)");//hatali giriste tekrar giris yapma imkani veren blok
