@@ -1,0 +1,546 @@
+– JVM Nedir?
+JVM, bir bilgisayarın java kodunu çalıştırabilmesine olanak sağlayan sanal makineye verilen addır. bytecode uzantılı dosyaları makine koduna çeviren bu soyut makine, java kodunu makine ve cihaz bağımsız aynı şekilde işletmemize olanak sağlar.
+
+ Cevap: Java, üst düzey bir programlama dilidir ve platformdan bağımsızdır.
+
+Java, nesnelerin bir koleksiyonudur. Sun Microsystems tarafından geliştirilmiştir.
+Java kullanılarak geliştirilen birçok uygulama, web sitesi ve oyun var.
+
+
+– JDK ve JRE arasındaki farklar nelerdir?
+JRE, Java runtime editioni bir java uygulamasını çalıştırmak için gerekli olan java komponentlerini ve kütüphanelerini içeren içersinde JVM de kurulu olan programa denir.
+
+JDK, Java ile yazılım geliştirmek için ihtiyaç duyulan yazılım kitlerini içinde bulundurur. .java uzantılı dosyaların compile edilip .class uzantılı ara dosyaların oluşmasına olanak sağlar. JDK, içerisinde JVM,JRE ve Java Compiler’ını bulundurur.
+
+
+
+– Object Oriented Programming nedir?
+Nesne Yönelimli Programlama (NYP) mantıksal işlemlerden ziyade, nesnelere (object) ve nesneler üzerinde işlemlere odaklanan programlama dili modelidir. NYP’de programlar, nesnelerin birbirileriyle etkileşime geçmeleri sağlanmasıyla tasarlanır.
+
+
+
+– Nesneye yönelik programlamanın temel kavramları nelerdir?
+1- Nesne(Object): Kendine has özellikleri ve belli durumlarda bu özelliklerine bağlı çeşitli tutumlar sergileyen somut ya da soyut varlıklardır.
+
+2- Sınıf(Class): Aynı türden nesnelerin oluşturulduğu yapıya verilen isimdir.
+
+3- Method:Bir nesnenin davranış türüdür, bir method sınıf içerisinde bulunur ve nesnelerin davranışlarını tanımlar.
+
+
+
+– Object Oriented Programming prensipleri nelerdir? (Encapsulation, Abstraction, Inheritence, Polymorphism)
+1-Abstraction(Soyutlama): Sınıfların içerisindeki metotların içlerini dışarısı için soyutlama veya gizleme işlemine Abstraction adı verilir. Bu işlem java’da abstract sınıflarla veya interface’ler ile yapılmaktadır. Abstract sınıflar genellikle ortak özellikleri olan nesneleri tek bir çatı altında toplamak için kullanılır. İçi boş ya da dolu metotlar tanımlanabilir. Abstract sınıflar içersinde bir obje new keywordu ile yaratılamaz. Ve bir abstract metot varsa o sınıfın abstract olarak tanımlanması gerekir. Abstract classlar genellikle is-a ilişkisine sahiptir. Interface sınıflar ise daha çok can-do tarzındadır. interface sınıflarında metotlar tanımlanabilir ve bu interface’i implemente eden sınıf interface’de yazılı olan metotların içini doldurmak zorundadır. Interface bir Vehicle ise; implemente edilen sınıflar Car, Plane, Boat olabilir. Abstract Sınıfta ise Abstract class Dog ise, extend edilen alt sınıflar Köpek cinsleri olabilir. Bir başka değişle abstract sınıflar bir üst sınıfın özelliklerini tanımlamaya ve alt sınıfın bu özellikleri kendilerine göre doldurmasına yarar, interface ise implemete edilecek birden fazla sınıfın ortak bir özellik kümesi olarak tanımlanabilir.
+
+2-Encapsulation(Kapsülleme): Sınıf içerisindeki fieldların veya değişkenlerin kapsülize edilerek dışarıdaki packagelerden veya sınıflardan erişebilmesini kontrol etmeye yarar. Get ve Set metotları ile erişim sağlanır.
+
+3-Inheritence(Kalıtım): Bir sınıfın bazı özelliklerini bir üst sınıftan almasına denir. Bu alt sınıf kendi özelliklerine ve fonksiyonlarına da sahip olup, extend ettiği üst sınıfının tüm özelliklerini de karşılamaktadır.
+
+4-Polymorphism(Çok Biçimlilik): Çok biçimlilik, bir değişkenin, işlevin veya nesnenin birden çok biçim alma yeteneğidir. Method overloading ve overriding. Bir referansın birden fazla obje gibi davranmasına denir. Extend edilen sınıfın obje referansı aynı zamanda alt sınıfı da refer edebilir. Bu sayede alt sınıfların objelerini tek bir üst sınıf referansı ile eşitleyebilir ve bunu çeşitli şekillerde kullanabiliriz.
+
+
+
+– Java neden platform bağımsız bir dildir?
+Java, temel işletim sisteminden bağımsız olarak herhangi bir sistemde çalışabilen bayt kodları nedeniyle platformdan bağımsız olarak adlandırılır.
+
+
+
+– Method Overloading ve Method Overriding nedir?
+Method Overloading aynı isimde metodun farklı parametreler ile tekrardan tanımlanmasına denir, Method Overriding ise daha önce üst sınıftan tanımlanmış olan bir metodun alt sınıfta tekrardan tanımlanmasıdır. Bu tanımlanan metot, eğer alt sınıftan üretilmiş bir obje üzerinden çağırılırsa override edilen alt sınıfta bulunan metot çağırılacak ve işlenecektir.
+
+
+
+– Java Collectionları nelerdir?
+Java Collectionları Set, Map ve List olmak üzere 3 ana interface üzerinden tanımlanabilir. Bu interface’lerin nesleleri ise şunlardır;
+
+Set: HashSet, TreeSet, LinkedHashSet
+
+Map: HashTable, HashMap, TreeMap, LinkedHashMap
+
+List: ArrayList, Vector, Stack, LinkedList, Queue
+
+
+
+– Upcasting nedir? Downcasting nedir?
+Bir sınıf(Üst Sınıf) kendisini extend eden (Alt) sınıfa cast edilebilir . Buna downcasting denir .
+
+Bir sınıf extend ettiği sınıfa cast edilebilir. Buna upcasting denir. (tip dönüşümü).
+
+
+
+– Integer ve int arasındaki fark nedir?
+int primative değişken tipidir. Sınıf olmadığı için herhangi bir metodu yoktur. Null değer alamaz.
+
+Integer ise bir sınıftır ve tanımlandığında obje özelliği gösterir. Süper sınıf olan object sınıfını extend eder bu yüzden null değer alabilir. İçerisinde integer değişkeni ile alakalı sayısal işlemler veya çevrimler yapabilmemizi sağlayan metotlar bulunmaktadır.
+
+
+
+– Serilization nedir?
+Bir nesnenin veya bir sınıfın saklanacak forma dönüştürülme işlemidir. Extend edilen Serilization sınıfı alt sınıf olan kullanacağımız sınıfın byte’lar halinde streamlere yazılabilir böylece bir java objesi veritabanına kaydedilebilir.
+
+Deserilization ise byte haline çevrilen java objesinin eski haline çevrimine denir.
+
+
+
+– Autoboxing boxing nedir?
+Wrapper’lar primative 8 değişkenin (byte,short,int,long,float,double,boolean,char) class halleridir. Autoboxing primative bir değişkenin wrapper sınıf tipine otomatik olarak dönüştürme işlemine denir. Boxing ise yine aynı wrapper sınıfına dönüştürme işlemidir ancak new ile üretilip constructor içerisinde bir initialization yapılır.
+
+
+
+– Autounboxing ve Unboxing nedir?
+Wrapper tipinden primative tipine otomatik olarak dönüştürme işlemine denir.
+
+Unboxing ise yine aynı dönüştürme işlemidir fakat bu dönüştürme .intValue() .shortValue() gibi metotlar ile sağlanır.
+
+
+
+– Garbage Collector nedir?
+Garbage Collectionlar, otomatik Garbage Collectionları mekanizması ile memory-leak lere engel olarak java’nın çalışır durumdayken verimliliğini koruması ve hafızayı fazla kullanımdan dolayı doldurmamasını sağlar. New ile üretilen objeler bilgisayar hafızasında yer tutacaktır. Bu objelerin kullanımları sonlandığı zaman Garbage Collector tarafından obje silinir ve kapladığı alan ram’den temizlenir.
+
+
+
+– Mutable ve Immutable nedir?
+Immutable nesneler bir kez oluşturulduktan sonra içeriği değiştirilemeyen sınıflardır. Tam tersi olarak da Mutable sınıflar ise değiştirilebilir sınıflardır.
+
+Immutable sınıflara örnek (String, Integer, Long, Double..) BigDecimal, BigInteger olarak verilebilir.
+
+Mutable sınıflara örnek olarak ise Date sınıfı verilebilir. Mutable, Set ile yeni bir değer atayabildiğimiz sınıflara denir.
+
+
+
+Java’da Immutable bir sınıf yaratmak için,
+
+1-Sınıf final ile başlaması gerekir böylece extend edilemez.
+
+2-Hiçbir değişken set metodu ile enkapsüle edilmemelidir.
+
+3-Tüm değiştirilebilir alanlar final olarak tanımlanmalıdır böylece yalnızca bir kez atanabilir.
+
+4-Tüm alanlar constructor aracılığı ile final bir değere atanmalıdır.
+
+5-Sınıfın tüm alanları private olarak tanımlanmalıdır.
+
+
+
+Immutable nesneler Thread-Safe’tir. Çünkü oluştuktan sonra içeriği değiştirilemez bu da threadlerde kullanımda ortaya çıkabilecek senkronizasyon sorunlarını ortadan kaldırır
+
+
+
+– Instance nedir?
+Referanstır, Objenin eşitlendiği değere denir. Bu instance kullanılarak new olarak üretilen obje birden fazla kez kullanılabilir.
+
+
+
+– Super ve this kavramları nedir?
+Super anahtar kelimesi (keyword) super class içindeki metotlara fieldlara ve constructora erişmek için kullanılır. this anahtar kelimesini kullanarak ise aynı sınıfa ait olan fieldlara metotlara ve constructora erişebiliriz. This anahtar kelimesinin kullanıldığı yerde aynı sınıfın geçerli bir instance’ı gibi davranır. super() this() ifadeler ise mutlaka bir constructor içerisinde kullanılmalıdır. Static metotlarda kullanılamaz.
+
+
+
+– Javada Access modifiers nelerdir? Farkları nelerdir? (Default, Private, Protected, Public)
+Javada, metotlara, classlara ve değişkenlere erişim seviyesini belirlemek için kullanılan keywordlerdir.
+
+1-Default: Aynı sınıftan, altsınıftan ve aynı package’den erişilebilir. Javada bir access modifier tanımlanmazsa default olarak kabul edilir ve bu geçerli olur.
+
+2-Private: Sadece aynı sınıftan erişilebilir.
+
+3-Protected: Aynı sınıftan, aynı packageden ve alt sınıflardan erişilebilir.
+
+4-Public: Her yerden erişilebilir.
+
+
+
+– Method ve Constructor arasındaki farklar nelerdir?
+Constructor, class çağırıldıgında ilk çalışan metotdur. Constructorılar parametre alabilir fakat değer döndürmez. Overload edilir , override edilmez. Her sınıfta default olarak gizli bir constructor bulunur ve sınıfın objesi oluşturulduğunda ilk olarak bu constructor metodu çalışır, işletilir. Parametereli constructorlar genellikle nesne ilk oluşturulduğunda sınıf içerisindeki değişkenlerin atanması veya nesnenin ilk oluştuğunda davranışlarını ayarlamak için kullanılır. Metod ise sınıf içerisinde bir değil birden fazla kez kullanılabilir, çağırılabilir. Override edilebilir. İhtiyaç halinde nesnenin oluşturulduğu farklı sınıflar içerisinde çağırılabilir.
+
+
+
+
+– Final anahtar kelimesi ne işe yarar?
+Final variables(değişkenler):Değiştirilemez. Static ile beraber Constant olarak kullanılabilir.
+
+Final class:Extend edilemez
+
+Final methods: Override edilemez.
+
+
+
+– Static değerlerin özellikleri ?
+Static variable:Class a aittir yani her nesne için bir defa oluşturulmaz. Memory de bir defa oluşturulur.
+
+Static method:Class a aittir yani her nesne için bir defa oluşturulmaz. Class ismiyle çağrılabilir.
+
+Static block:Class execute edildiği zaman heap de yerini alır.
+
+ -Java’nın en temel özellikleri nelerdir ?
+ Taşınabilir: Java, “Write once, run anywhere” yaklaşımını destekler ve her makinede çalıştırılabilir.
+ Platform Bağımsız: Java, platformdan bağımsız programlama dilidir.
+ Güvenli: Java, açık işaretçiler kullanmadığı için güvenlidir. ByteCode ve Exception işleme konseptini sağlaması da onu daha güvenli hale getirir.
+ Sağlam: Java, güçlü bellek yönetimi sistemi kullanır bu durum Java’yı güçlü hale getirir.
+ Yorumlanabilir: Java, programın yürütülmesi için derleyiciyle birlikte Just-in-time (JIT) yorumlayıcısını kullanır.
+ Yüksek Performans: Java, diğer geleneksel yorumlanmış programlama dillerinden daha hızlıdır çünkü Java bayt kodu yerel koda daha yakındır.
+ Çok iş parçacıklı: Birden çok iş parçacığı tanımlama sayesinde birçok görevi aynı anda gerçekleştiren Java programları yazılabilir.
+ Dağıtılmış: Java’nın dağıtılma özelliği sayesinde internetteki herhangi bir makineden yöntemleri arayarak dosyalara erişmemizi sağlanabilir.
+
+ 👉 JVM, JRE ve JDK arasındaki farklar nelerdir?
+ JVM(Java Virtual Machine): Java bayt kodunu çalıştırmak için bir çalışma zamanı ortamı sağlar.
+
+ JRE(Java Runtime Environment): Java programlarını çalıştırmak için gereksinimlerini içeren, içerisinde JVM’yi ve çekirdek dosyalarını bulunduran yazılımdır.
+
+ JDK(Java Development Kit): Java uygulamaları geliştirmek için gerekli araçları içeren geliştirici paketidir.
+
+ jdk-jvm
+
+
+
+👉Java’da this() ve super() arasındaki fark nedir?
+this():
+Bir sınıfın mevcut örneğini temsil eder.
+Aynı sınıfın varsayılan kurucusunu çağırmak için kullanılır.
+Mevcut sınıfın yöntemlerine erişmek ve sınıf örneğini işaret etmek için kullanılır.
+
+super():
+Bir üst/temel sınıfın geçerli örneğini temsil eder.
+Üst/temel sınıfın varsayılan yapıcısını çağırmak için kullanılır.
+Temel sınıfın yöntemlerine erişmek ve üst sınıf örneğini işaret etmek için kullanılır.
+
+
+👉Java’da sonsuz döngü nedir? Bir örnekle açıklayın.
+Bu tür bir döngü, programlama hatasının sonucu olabilir veya uygulama davranışına bağlı olarak kasıtlı bir eylem de olabilir.
+
+Sonsuz bir döngü içeren döngü for ile:
+for(;;){} şeklinde oluşturulur.
+
+ while ile oluşturulabilecek en kısa sonsuz döngü:
+while (true)
+System.out.println(“merhaba”);
+şeklinde oluşturulur.
+
+
+ JAVA'nın özellikleri nelerdir?
+
+Cevap: Java'nın özellikleri aşağıdaki gibidir:
+
+OOP kavramları
+Nesne odaklı
+Miras
+Kapsülleme
+Polimorfizm
+Soyutlama
+Platform bağımsız: Tek bir program, herhangi bir değişiklik yapmadan farklı platformlarda çalışır.
+Yüksek performans: JIT (Just In Time derleyici) Java'da yüksek performans sağlar. JIT, bayt kodunu makine diline dönüştürür ve ardından JVM, yürütmeyi başlatır.
+Çok iş parçacıklı: Yürütme akışı, İş Parçacığı olarak bilinir. JVM, ana iş parçacığı olarak adlandırılan bir iş parçacığı oluşturur.
+Kullanıcı, iş parçacığı sınıfını genişleterek veya Runnable arabirimini uygulayarak birden çok iş parçacığı oluşturabilir.
+
+👉Object-oriented programming kavramı nedir?
+Nesne tabanlı programlama (OOP); yazılım tasarımını veri ve nesneler etrafında düzenleyen bir programlama dili modelidir.
+Temel OOPL Kavramları:
+Abstraction: Bir sınıfta davranış ve özelliklerin tanımlanmasıdır.
+Encapsulation: Kapsülleme sayesinde, hangi özellik ve davranışların program dışına gösterilip gösterilmeyeceğini belirleriz.
+Inheritance: : Sınıfların birbirinden türeme durumudur. Farklı sınıflar arasındaki ilişki “is a” şeklinde ifade edilir.
+Inferface: Uygulamaların donanım yapılarıyla ve birbirleriyle iletişim kurması için kullandığı bir yapıdır. Zorunlu olarak tanımlanması gereken metotları belirtir.
+Polymorphism: Methodların objeye göre farklı çıktılar üretmesi veya farklı işler yapmasıdır. Örneğin: Alt sınıfların farklı davranışları göstermesi.
+
+
+
+👉Veri tipleri ve değişkenler nelerdir?
+Local Variable: Java’da method içerisinde tanımlayabildiğimiz değişkenler local değişkendir.
+
+Class Variable: Statik değişkenler olarak bilinen sınıf değişkenleri; sınıf içerisinde bir yöntem, yapıcı olarak veya bloğun dışında statik anahtar sözcükle tanımlanır.
+
+Instance Variable: Class içerisinde tanımlayabildiğimiz, statik olmayan değişkenlere instance variable denir.
+
+public class VariableExample{
+   int myVariable;
+   static int data = 30;
+
+   public static void main(String args[]){
+      int a = 100;
+      VariableExample obj = new VariableExample();
+
+      System.out.println("Value of instance variable myVariable: "+obj.myVariable);
+      System.out.println("Value of static variable data: "+VariableExample.data);
+      System.out.println("Value of local variable a: "+a);
+   }
+}
+
+
+ s)Java IDE'leri adlandırılsın mı?
+
+Cevap: Eclipse ve NetBeans, Intellij JAVA’nın IDE’leridir.
+
+ Yapıcı(constructor) derken neyi kastediyorsunuz?
+
+Cevap: Oluşturucu listelenen noktalarla ayrıntılı olarak açıklanabilir:
+
+Bir programda yeni bir nesne oluşturulduğunda, sınıfa karşılık gelen bir kurucu çağrılır.
+Yapıcı, sınıf adıyla aynı ada sahip bir yöntemdir.
+Bir kullanıcı örtük olarak bir yapıcı oluşturmazsa, varsayılan bir kurucu oluşturulur.
+Yapıcı aşırı yüklenebilir.
+Kullanıcı bir parametre ile bir kurucu oluşturduysa, o zaman bir parametre olmadan açıkça başka bir kurucu oluşturmalıdır.
+
+
+
+S ) Nesne nedir?
+
+Cevap: Bir sınıfın bir örneğine nesne denir. Nesnenin durumu ve davranışı vardır.
+
+JVM 'new ()' anahtar kelimesini her okuduğunda, o sınıfın bir örneğini oluşturacaktır.
+
+Misal:
+
+public class Addition{ public static void main(String[] args)
+{ Addion add = new Addition();//Object creation }
+}
+Yukarıdaki kod, Addition sınıfı için nesneyi oluşturur.
+
+
+S ) OOP kavramları nelerdir?
+
+Cevap: OOP kavramları şunları içerir:
+
+Miras --inheritance
+Kapsülleme
+Polimorfizm
+Soyutlama--Abstructatoin
+Arayüz--interface
+Önerilen Okuma = >> En Popüler OOP Mülakat Soruları
+
+
+
+👉Overloading ve override nedir?
+Overloading: Aynı isime sahip birden fazla metod kullanma durumuna overloading denir. Bu durumda, metotları birbirinden ayıran fark, aldıkları parametre olur. Bir metodu overloading yaparken aynı işlemi veya benzer işlemleri de gerçekleştirecek şekilde overloading yapmalısınız.
+
+Override: Bir metodun tekrardan yazılması anlamına gelir. Kalıtım ile aldığımız bir metodu değiştirmek istersek o zaman override etmemiz yani yeniden yazmamız gerekir.
+
+
+
+👉”Array ve ArrayList” arasındaki fark nedir?
+Diziler, bellek üzerinde aynı tipte veri tutabilmemizi sağlar.
+ArrayList ise dizilerin eksik yanlarını gidermek için oluşturulmuştur.
+ArrayList’in en önemli özelliği, içerisinde farklı değişken türlerini barındırıyor olmasıdır.
+
+Diziler sabit uzunlukta tanımlanırlar. ArrayList’te ise böyle bir koşul yoktur.
+
+Diziler tanımlanırken içerisine dahil edeceğimiz elemanların türünü belirtmemiz gerekir. ArrayList’te böyle bir koşul yoktur.
+
+
+
+
+👉Break ve continue ifadeleri arasındaki fark nedir?
+Break: Switch ve loop ifadelerinde kullanılabilir ve bu deyimlerin yürütüldüğü an da sona ermesine neden olur.
+
+Continue: Yalnızca döngü ifadeleriyle kullanılabilir ve döngüyü sonlandırmaz, sadece döngünün bir sonraki yinelemeye atlamasına neden olur.
+
+Örnek:
+
+public class JavaTest{
+   public static void main(String args[]){
+      System.out.println("Break Statement\n");
+      for(int i=1;i<=5;i++){
+         if(i==4) break;
+         System.out.println(i);
+      }
+      System.out.println("Continue Statement\n");
+      for(int i=1;i<=5;i++){
+         if(i==1) continue;
+         System.out.println(i);
+      }
+   }
+}
+👉En kısa tanımıyla “object ve class” nedir?
+Sınıf: Nesnelerin işlev ve özelliklerini tanımlar.
+
+Nesne:  Nesne, sınıfın davranışını belirler, bu durumda nesne bir sınıfın örneğidir diyebiliriz.
+
+
+
+
+👉”public static void main(String[ ] args)” neden kullanmalıyız?
+JVM kodları çalışırken yazılmış classlar arasından başlayacağı noktayı bilmesi gerekmektedir. JVM, publicstaticvoidmain(String[ ] args) metodunu arar ve oradan çalışmaya başlar. Java mülakat soruları listesinde en sık sorulan sorulardan biridirç
+
+Public, erişim durumunu belirtmek için kullanılan bir erişim belirleyicidir.
+Main metodu, programın ana metodu olarak geçer.
+Static : Java’nın sınıf tabanlı olduğunu tanımlayan bir anahtar kelimedir.
+Void, herhangi bir değer döndürmeyecek yöntemi tanımlar.
+String args []: Ana metoda aktarılan parametredir.
+
+
+
+S ) Kalıtım -inheritance-nedir?
+
+Cevap: Miras, bir sınıfın başka bir sınıfa genişletilebileceği anlamına gelir.
+Böylece kodlar bir sınıftan diğerine yeniden kullanılabilir. Mevcut sınıf Süper sınıf olarak bilinirken, türetilmiş sınıf bir alt sınıf olarak bilinir.
+
+Misal:
+
+Super class:
+public class Manupulation(){ }
+Sub class: public class Addition extends Manipulation(){ }
+
+Miras, yalnızca kamu ve korunan üyeler için geçerlidir. Özel üyeler devralınamaz.
+
+
+S ) Kapsülleme nedir?
+
+Cevap: Kapsülleme Amacı:
+
+Kodu başkalarından korur.
+Kod sürdürülebilirliği saglar.
+Misal:
+
+Bir tamsayı değişkeni olarak 'a' yı ilan ediyoruz ve bu negatif olmamalı.
+
+public class Addition(){ int a=5; }
+
+Değişkeni özel veya korumalı yapabiliriz.
+Set ve get gibi genel erişimci yöntemlerini kullanın.
+Böylece yukarıdaki kod şu şekilde değiştirilebilir:
+
+public class Addition(){ private int a = 5; //Here the variable is marked as private }
+
+
+
+S ) Arayüz(interface) ile ne kastedilmektedir?
+
+Cevap: Java'da birden çok miras elde edilemez. Bu sorunun üstesinden gelmek için Arayüz kavramı tanıtıldı.
+
+Arayüz, yalnızca yöntem bildirimlerine sahip olan ve yöntem uygulamasına sahip olmayan bir şablondur.
+
+Misal:
+
+Public abstract interface IManupulation{ //Interface declaration Public abstract void add();//method declaration public abstract void subtract(); }
+Arayüzdeki tüm yöntemler dahili olarak genel soyut boşluk .
+Arayüzdeki tüm değişkenler dahili olarak genel statik final bu sabitler.
+classlar arayüzü uygulayabilir ve genişletilemez.
+Arabirimi uygulayan sınıf, arabirimde bildirilen tüm yöntemler için bir uygulama sağlamalıdır.
+public class Manupulation implements IManupulation{ //Manupulation class uses the interface Public void add(){ …………… } Public void subtract(){ ……………. } }
+
+
+S) Soyut sınıf ile kastedilen nedir?
+
+Cevap: Abstract sınıfını, sınıf isminden önce 'Abstract' anahtar sözcüğünü kullanarak oluşturabiliriz. Soyut bir sınıf, somut bir sınıf olan hem “Soyut” hem de “Soyut olmayan” yöntemlere sahip olabilir.
+
+Soyut yöntem:
+
+Yalnızca bildirime sahip olan ve uygulamaya sahip olmayan yönteme soyut yöntem denir ve 'soyut' olarak adlandırılan anahtar kelimeye sahiptir. Bildirimler noktalı virgülle biter.
+
+Misal:
+
+
+
+
+S) Dizi ve Dizi Listesi arasındaki fark.
+
+
+
+S ) String, String Builder ve String Buffer arasındaki fark.
+
+S ) HashMap ve HashTable arasındaki fark.
+
+S) HashSet ve TreeSet arasındaki fark.
+
+S)Abstruct class ile interface arasinaki farklar
+
+S) Java'da Koleksiyonların nelerdir?
+
+S) Setlerin en onemli ozelligi nelerdir
+
+S)Hash lerin en onemli ozellikleri nelerdir
+
+S) Map turleri nelerdir baslica ozellikleri
+
+S)S # 31) İstisna ile kastedilen nedir?
+
+  Cevap: İstisna(Exception), normal yürütme akışı sırasında ortaya çıkabilecek bir sorundur. Bir yöntem, çalışma zamanında bir şey ağladığında bir istisna atabilir. Bu istisna ele alınamazsa, görevi tamamlamadan yürütme sona erer.
+
+  İstisnayı ele alırsak, normal akış devam eder. İstisnalar, java.lang.Exception'ın alt sınıfıdır.
+
+  İstisnayı ele alma örneği:
+
+  try{ //Risky codes are surrounded by this block
+  }catch(Exception e){
+   //Exceptions are caught in catch block }
+
+
+
+
+S ) İstisna(Exceptions türleri nelerdir?
+
+Cevap: İki tür İstisna vardır. Aşağıda ayrıntılı olarak açıklanmıştır.
+
+a) Kontrol Edilmiş İstisna:
+
+Bu istisnalar, derleme sırasında derleyici tarafından kontrol edilir. Çalışma Zamanı istisnası ve Hata dışında Throwable sınıfını genişleten sınıflar, kontrol edilen İstisna olarak adlandırılır.
+
+Kontrol Edilmiş İstisnalar, uygun try / catch ile çevrili throws anahtar kelimesini (veya) kullanarak istisnayı bildirmelidir.
+
+Örneğin, ClassNotFound İstisnası
+
+b) Kontrol Edilmemiş İstisna:
+
+Bu istisnalar derleme sırasında derleyici tarafından kontrol edilmez. Derleyici bu istisnaları işlemeye zorlamaz. O içerir:
+
+Aritmetik İstisna
+ArrayIndexOutOfBounds İstisnası
+
+
+
+S ) İstisnaları(Exceptions)) ele almanın(handle etme) farklı yolları nelerdir?
+
+Cevap: İstisnaları ele almanın iki farklı yolu aşağıda açıklanmıştır:
+
+a) Try / catch kullanımı:
+
+Riskli kod, try bloğu ile çevrilidir. Bir istisna oluşursa, catch bloğu tarafından yakalanır ve ardından try bloğu gelir.
+
+Misal:
+
+class Manipulation{ public static void main(String[] args){ add(); } Public void add(){ try{ addition(); }catch(Exception e){ e.printStacktrace(); } } }
+b) throws anahtar kelimesini bildirerek:
+
+Yöntemin sonunda, throws anahtar sözcüğünü kullanarak istisnayı bildirebiliriz.
+Misal:
+
+class Manipulation{ public static void main(String[] args){ add(); } public void add() throws Exception{ addition(); } }
+
+
+
+S # 35) Java'da istisnaException işleme anahtar sözcükleri nelerdir?
+
+Cevap: Aşağıda listelenen iki İstisna İşleme Anahtar Kelimesi verilmiştir:
+
+try:
+
+Riskli bir kod bir try bloğu ile çevrildiğinde. Try bloğunda meydana gelen bir istisna, bir catch bloğu tarafından yakalanır. Try, ya catch (ya da) nihayet (ya da) her ikisi ile takip edilebilir. Ancak bloklardan herhangi biri zorunludur.
+
+b) catch:
+
+Bunu bir deneme bloğu izler. İstisnalar burada yakalanmıştır.
+
+c) finally:
+Bunu ya try bloğu (ya da) catch bloğu takip eder. Bu blok, istisnadan bağımsız olarak yürütülür.
+Bu nedenle, genel olarak temizleme kodları burada verilmiştir.
+
+
+
+S ) Java'daki son(final) anahtar kelime nedir?
+
+Cevap:
+
+Değişken son: Bir değişken nihai olarak bildirildiğinde, değişkenin değeri değiştirilemez. Sabit gibidir.
+
+Misal:
+
+final int = 12;
+
+Son yöntem: Bir yöntemdeki son bir anahtar kelime geçersiz kılınamaz. Bir yöntem son olarak işaretlenmişse, alt sınıf tarafından geçersiz kılınamaz.
+
+Son sınıf: Bir sınıf nihai olarak bildirilirse, o zaman sınıf alt sınıflara alınamaz. Son sınıfı hiçbir sınıf
+
+
+S ) Bir geçici değişkenin amacı nedir?
+
+Cevap: Geçici değişkenler, serileştirme sürecinin bir parçası değildir. Seriyi kaldırma sırasında, geçici değişkenlerin değerleri varsayılan değere ayarlanır. Statik değişkenlerle kullanılmaz.
+
+Misal:
+
+geçici int sayıları;
